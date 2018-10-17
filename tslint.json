@@ -15,7 +15,11 @@
     "ordered-imports": [true, {
       "import-sources-order": "any",
       "named-imports-order": "case-insensitive"
-    }]
+    }],
+    "no-unused-expression": false,
+    "no-unused-expression-chai": true
   },
-  "rulesDirectory": []
+  "rulesDirectory": [
+    "tslint-no-unused-expression-chai"
+  ]
 }
