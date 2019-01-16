@@ -10,11 +10,11 @@ function test() {
 }
 
 function integrationTest() {
-    return spawn('nyc', ['mocha', 'test/integration/**/*.spec.ts'], {stdio: 'inherit'});
+    return spawn('nyc', ['mocha', '--timeout', '999999', 'test/integration/**/*.spec.ts'], {stdio: 'inherit'});
 }
 
 function systemTest() {
-    return spawn('mocha', ['test/system/**/*.spec.ts'], {stdio: 'inherit'});
+    return spawn('mocha', ['--timeout', '999999', 'test/system/**/*.spec.ts'], {stdio: 'inherit'});
 }
 
 function buildDockerImage() {
