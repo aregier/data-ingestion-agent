@@ -14,7 +14,7 @@ RUN apt-get update && apt-get -y install git-core
 WORKDIR /app
 COPY --from=adastradev/oracle-instantclient:18.3-lite /usr/lib/oracle /usr/lib/oracle
 COPY --from=adastradev/oracle-instantclient:18.3-lite /usr/lib64/libaio* /lib/
-COPY package.json package-lock.json *.ts *config* ./
+COPY gulpfile.js package.json package-lock.json *.ts *config* ./
 COPY source ./source
 COPY test ./test
 COPY docs ./docs
@@ -37,15 +37,16 @@ WORKDIR /app
 COPY --from=adastradev/oracle-instantclient:18.3-lite /usr/lib/oracle /usr/lib/oracle
 COPY --from=adastradev/oracle-instantclient:18.3-lite /usr/lib64/libaio* /lib/
 COPY --from=build-env /app/package.json .
-COPY --from=build-env /app/dist dist
-COPY --from=build-env /app/docs docs
+COPY --from=build-env /app/dist/*.js ./
+COPY --from=build-env /app/dist/source source
 COPY --from=build-env /app/node_modules node_modules
+
 
 # Report to docker the health status so we can possibly use that information
 # For now mark unhealthy after 25 sec (interval*retries)
 # We could use this information in a watchtower kind of way to restart in addition to upgrade
-HEALTHCHECK --interval=5s --timeout=10s --start-period=10s --retries=5 CMD node dist/healthcheck.js || exit 1
+HEALTHCHECK --interval=5s --timeout=10s --start-period=10s --retries=5 CMD node healthcheck.js || exit 1
 
 # Run the startup script which spawns the agent and acts as a intermediary between it
 # and docker to signal the containers health
-ENTRYPOINT ["npm", "start"]
+ENTRYPOINT ["node", "index.js"]

@@ -15,7 +15,16 @@
       "reflect-metadata",
       "mocha",
       "node"
-    ]
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@source/*": ["source/*"],
+      "@commands/*": ["source/Commands/*"],
+      "@dataAccess/*": ["source/DataAccess/*"],
+      "@messageHandlers/*": ["source/Messagehandlers/*"],
+      "@messages/*": ["source/Messages/*"],
+      "@util/*": ["source/Util/*"]
+    }
   },
   "exclude": [
     "node_modules"

@@ -1,3 +1,4 @@
+import 'module-alias/register';
 import startup from './inversify.config';
 import TYPES from './ioc.types';
 import { Agent } from './source/Agent';
