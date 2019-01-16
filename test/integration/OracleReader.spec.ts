@@ -1,7 +1,7 @@
 // tslint:disable:no-conditional-assignment
 
 import container from '../unit/test.inversify.config';
-import OracleReader from '../../source/DataAccess/Oracle/OracleReader';
+import OracleReader from '@DataAccess/Oracle/OracleReader';
 import TYPES from '../../ioc.types';
 import { Logger } from 'winston';
 
@@ -9,9 +9,9 @@ import * as chai from 'chai';
 import * as chaiAsPromised from 'chai-as-promised';
 chai.use(chaiAsPromised);
 
-import OracleConnectionPoolProxy from '../../source/DataAccess/Oracle/OracleConnectionPoolProxy';
-import { IQueryResult } from '../../source/DataAccess/IDataReader';
-import OracleDDLHelper from '../../source/DataAccess/Oracle/OracleDDLHelper';
+import OracleConnectionPoolProxy from '@DataAccess/Oracle/OracleConnectionPoolProxy';
+import { IQueryResult } from '@DataAccess/IDataReader';
+import OracleDDLHelper from '@DataAccess/Oracle/OracleDDLHelper';
 
 const expect = chai.expect;
 

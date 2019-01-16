@@ -1,8 +1,8 @@
 import { inject, injectable } from 'inversify';
 import 'reflect-metadata';
 
-import IMessageHandler from '../IMessageHandler';
-import DummyMessage from '../Messages/DummyMessage';
+import IMessageHandler from '@source/IMessageHandler';
+import DummyMessage from '@Messages/DummyMessage';
 
 @injectable()
 export default class DummyHandler implements IMessageHandler {

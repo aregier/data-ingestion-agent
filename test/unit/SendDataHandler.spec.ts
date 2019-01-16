@@ -4,15 +4,15 @@ import * as chai from 'chai';
 import container from './test.inversify.config';
 import TYPES from '../../ioc.types';
 
-import IMessage from '../../source/IMessage';
-import SendDataMessage from '../../source/Messages/SendDataMessage';
-import SendDataHandler from '../../source/MessageHandlers/SendDataHandler';
-import IDataWriter from '../../source/DataAccess/IDataWriter';
+import IMessage from '@source/IMessage';
+import SendDataMessage from '@Messages/SendDataMessage';
+import SendDataHandler from '@MessageHandlers/SendDataHandler';
+import IDataWriter from '@DataAccess/IDataWriter';
 import * as sinon from 'sinon';
 import { Logger } from 'winston';
-import IntegrationConfigFactory from '../../source/IntegrationConfigFactory';
-import IConnectionPool from '../../source/DataAccess/IConnectionPool';
-import OracleDDLHelper from '../../source/DataAccess/Oracle/OracleDDLHelper';
+import IntegrationConfigFactory from '@source/IntegrationConfigFactory';
+import IConnectionPool from '@DataAccess/IConnectionPool';
+import OracleDDLHelper from '@DataAccess/Oracle/OracleDDLHelper';
 
 const expect = chai.expect;
 

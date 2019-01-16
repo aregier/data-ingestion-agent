@@ -1,7 +1,7 @@
 'use strict';
 
-import IntegrationConfigFactory from '../IntegrationConfigFactory';
-import { IIntegrationConfig, IntegrationType } from '../IIntegrationConfig';
+import IntegrationConfigFactory from '@source/IntegrationConfigFactory';
+import { IIntegrationConfig, IntegrationType } from '@source/IIntegrationConfig';
 import { writeFile } from 'fs';
 
 export default class DataAccessDocGenerator {

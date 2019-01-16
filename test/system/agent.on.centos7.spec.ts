@@ -7,7 +7,7 @@ import IInvoker from './util/CommandInvokers/IInvoker';
 import SshCommandInvoker from './util/CommandInvokers/SshCommandInvoker';
 import { InstallDockerCommand } from './util/InstanceCommands/CentOS7/Commands';
 import * as DockerCommands from './util/InstanceCommands/Docker/Commands';
-import sleep from '../../source/Util/sleep';
+import sleep from '@Util/sleep';
 
 const expect = chai.expect;
 

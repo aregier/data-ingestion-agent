@@ -31,7 +31,7 @@ function publishCoverage() {
 function generateDocs() {
     // todo: Implement this script in this gulpfile instead of running externally
     // todo: I don't like build scripts performing git operations.
-    const args = ['-c', 'node -r ts-node/register ./source/util/pre-commit.ts && git add ./docs/DataAccess'];
+    const args = ['-c', 'node -r ts-node/register -r module-alias/register ./source/util/pre-commit.ts && git add ./docs/DataAccess'];
     return spawn('sh', args, {stdio: 'inherit'});
 }
 

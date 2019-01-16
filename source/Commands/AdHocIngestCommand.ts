@@ -1,8 +1,8 @@
 import ICommand from './ICommand';
 import { inject, injectable } from 'inversify';
-import TYPES from '../../ioc.types';
+import TYPES from '@root/ioc.types';
 import { SQS } from 'aws-sdk';
-import SendDataMessage from '../Messages/SendDataMessage';
+import SendDataMessage from '@Messages/SendDataMessage';
 import { Logger } from 'winston';
 
 /**

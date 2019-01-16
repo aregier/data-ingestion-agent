@@ -1,8 +1,8 @@
 import * as oracledb from 'oracledb';
 import { inject, injectable } from 'inversify';
-import TYPES from '../../../ioc.types';
+import TYPES from '@root/ioc.types';
 import { Logger } from 'winston';
-import IConnectionPool from '../IConnectionPool';
+import IConnectionPool from '@DataAccess/IConnectionPool';
 
 let POOL_SIZE = 5;
 if (process.env.CONCURRENT_CONNECTIONS) {

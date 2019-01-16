@@ -2,7 +2,7 @@
 import 'reflect-metadata';
 import * as chai from 'chai';
 
-import SendDataMessage from '../../source/Messages/SendDataMessage';
+import SendDataMessage from '@Messages/SendDataMessage';
 
 const expect = chai.expect;
 

@@ -1,12 +1,11 @@
-options:
-  max-time: 120
-
 image: atlassian/default-image:2
 
 pipelines:
   branches:
     master:
       - step:
+          caches:
+            - node
           services:
             - docker
           script:
@@ -32,6 +31,8 @@ pipelines:
             - . ./pipeline/run-system-tests.sh
     feature/*:
       - step:
+          caches:
+            - node
           services:
             - docker
           script: 

@@ -1,7 +1,7 @@
-import IDDLHelper from '../IDDLHelper';
+import IDDLHelper from '@DataAccess/IDDLHelper';
 import { inject, injectable } from 'inversify';
-import TYPES from '../../../ioc.types';
-import IConnectionPool from '../IConnectionPool';
+import TYPES from '@root/ioc.types';
+import IConnectionPool from '@DataAccess/IConnectionPool';
 import oracledb = require('oracledb');
 import { DepGraph } from 'dependency-graph';
 

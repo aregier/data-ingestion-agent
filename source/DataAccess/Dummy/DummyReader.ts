@@ -1,9 +1,9 @@
 import { Readable } from 'stream';
 import { inject, injectable } from 'inversify';
-import TYPES from '../../../ioc.types';
+import TYPES from '@root/ioc.types';
 import { Logger } from 'winston';
 
-import IDataReader, { IQueryResult } from '../IDataReader';
+import IDataReader, { IQueryResult } from '@DataAccess/IDataReader';
 
 @injectable()
 export default class DummyReader implements IDataReader {

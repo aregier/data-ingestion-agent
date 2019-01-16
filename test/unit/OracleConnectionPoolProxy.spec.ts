@@ -10,8 +10,8 @@ chai.use(chaiAsPromised);
 
 import container from './test.inversify.config';
 import * as oracledb from 'oracledb';
-import IConnectionPool from '../../source/DataAccess/IConnectionPool';
-import OracleConnectionPoolProxy from '../../source/DataAccess/Oracle/OracleConnectionPoolProxy';
+import IConnectionPool from '@DataAccess/IConnectionPool';
+import OracleConnectionPoolProxy from '@DataAccess/Oracle/OracleConnectionPoolProxy';
 
 const expect = chai.expect;
 

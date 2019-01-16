@@ -14,12 +14,13 @@
     "generate-docs": "gulp generateDocs"
   },
   "_moduleAliases": {
+    "@root": ".",
     "@source": "source",
-    "@commands": "source/Commands",
-    "@dataAccess": "source/DataAccess",
-    "@messageHandlers": "source/Messagehandlers",
-    "@messages": "source/Messages",
-    "@util": "source/Util"
+    "@Commands": "source/Commands",
+    "@DataAccess": "source/DataAccess",
+    "@MessageHandlers": "source/MessageHandlers",
+    "@Messages": "source/Messages",
+    "@Util": "source/Util"
   },
   "pre-commit": [
     "generate-docs"

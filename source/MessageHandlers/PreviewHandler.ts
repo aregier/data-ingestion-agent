@@ -1,14 +1,14 @@
-import IMessageHandler from '../IMessageHandler';
-import TYPES from '../../ioc.types';
+import IMessageHandler from '@source/IMessageHandler';
+import TYPES from '@root/ioc.types';
 
 import { Logger } from 'winston';
 import { inject, injectable } from 'inversify';
 import 'reflect-metadata';
 
-import PreviewMessage from '../Messages/PreviewMessage';
-import IDataReader from '../DataAccess/IDataReader';
-import IntegrationConfigFactory from '../IntegrationConfigFactory';
-import { IntegrationType, IQueryDefinition } from '../IIntegrationConfig';
+import PreviewMessage from '@Messages/PreviewMessage';
+import IDataReader from '@DataAccess/IDataReader';
+import IntegrationConfigFactory from '@source/IntegrationConfigFactory';
+import { IntegrationType, IQueryDefinition } from '@source/IIntegrationConfig';
 
 /**
  * Handles messages received to instruct the agent to preview queries used by the agent

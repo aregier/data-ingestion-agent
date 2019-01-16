@@ -8,19 +8,19 @@ chai.use(chaiAsPromised);
 import * as sinon from 'sinon';
 
 import container from './test.inversify.config';
-import { Agent, AgentMode } from '../../source/Agent';
-import ICommand from '../../source/Commands/ICommand';
+import { Agent, AgentMode } from '@source/Agent';
+import ICommand from '@Commands/ICommand';
 import TYPES from '../../ioc.types';
-import { InvalidCommandException } from '../../source/InvalidCommandException';
+import { InvalidCommandException } from '@source/InvalidCommandException';
 import winston = require('winston');
 import { AuthManager } from '@adastradev/user-management-sdk';
 import { SQS } from 'aws-sdk';
-import PreviewMessage from '../../source/Messages/PreviewMessage';
+import PreviewMessage from '@Messages/PreviewMessage';
 import { create } from 'domain';
-import DummyMessage from '../../source/Messages/DummyMessage';
-import MessageHandlerFactory from '../../source/MessageHandlerFactory';
-import MessageFactory from '../../source/MessageFactory';
-import DummyHandler from '../../source/MessageHandlers/DummyHandler';
+import DummyMessage from '@Messages/DummyMessage';
+import MessageHandlerFactory from '@source/MessageHandlerFactory';
+import MessageFactory from '@source/MessageFactory';
+import DummyHandler from '@MessageHandlers/DummyHandler';
 
 const expect = chai.expect;
 

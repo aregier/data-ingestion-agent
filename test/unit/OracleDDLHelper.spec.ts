@@ -4,8 +4,8 @@ import * as chai from 'chai';
 import * as chaiAsPromised from 'chai-as-promised';
 chai.use(chaiAsPromised);
 
-import OracleDDLHelper from '../../source/DataAccess/Oracle/OracleDDLHelper';
-import IConnectionPool from '../../source/DataAccess/IConnectionPool';
+import OracleDDLHelper from '@DataAccess/Oracle/OracleDDLHelper';
+import IConnectionPool from '@DataAccess/IConnectionPool';
 
 const expect = chai.expect;
 

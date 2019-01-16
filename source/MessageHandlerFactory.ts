@@ -1,4 +1,4 @@
-import TYPES from '../ioc.types';
+import TYPES from '@root/ioc.types';
 import { Container, inject, injectable } from 'inversify';
 import 'reflect-metadata';
 

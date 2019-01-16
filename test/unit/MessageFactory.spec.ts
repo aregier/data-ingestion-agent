@@ -5,9 +5,9 @@ import { Container } from 'inversify';
 import startup from './test.inversify.config';
 import TYPES from '../../ioc.types';
 
-import SendDataMessage from '../../source/Messages/SendDataMessage';
-import IMessage from '../../source/IMessage';
-import MessageFactory from '../../source/MessageFactory';
+import SendDataMessage from '@Messages/SendDataMessage';
+import IMessage from '@source/IMessage';
+import MessageFactory from '@source/MessageFactory';
 
 const expect = chai.expect;
 

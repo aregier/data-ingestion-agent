@@ -3,10 +3,10 @@ import * as chai from 'chai';
 import container from './test.inversify.config';
 import TYPES from '../../ioc.types';
 
-import IMessage from '../../source/IMessage';
-import MessageHandlerFactory from '../../source/MessageHandlerFactory';
-import DummyMessage from '../../source/Messages/DummyMessage';
-import DummyHandler from '../../source/MessageHandlers/DummyHandler';
+import IMessage from '@source/IMessage';
+import MessageHandlerFactory from '@source/MessageHandlerFactory';
+import DummyMessage from '@Messages/DummyMessage';
+import DummyHandler from '@MessageHandlers/DummyHandler';
 
 const expect = chai.expect;
 

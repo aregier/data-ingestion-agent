@@ -1,5 +1,5 @@
 import { Readable, Stream } from 'stream';
-import { IQueryDefinition } from '../IIntegrationConfig';
+import { IQueryDefinition } from '@source/IIntegrationConfig';
 
 /**
  * Represents a mechanism intended to read data from some datasource and output that data as a stream
