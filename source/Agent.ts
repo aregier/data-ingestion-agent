@@ -2,7 +2,7 @@ import { SQS } from 'aws-sdk';
 import * as Winston from 'winston';
 import { Container, inject, injectable } from 'inversify';
 
-import TYPES from '../ioc.types';
+import TYPES from '@root/ioc.types';
 import MessageHandlerFactory from './MessageHandlerFactory';
 import IMessage from './IMessage';
 import IMessageHandler from './IMessageHandler';

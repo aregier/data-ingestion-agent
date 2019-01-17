@@ -1,6 +1,6 @@
 // tslint:disable:no-string-literal
 
-import TYPES from '../ioc.types';
+import TYPES from '@root/ioc.types';
 import { inject, injectable, named } from 'inversify';
 import 'reflect-metadata';
 import { IIntegrationConfig, IntegrationSystemType, IntegrationType, IQueryDefinition  } from './IIntegrationConfig';
