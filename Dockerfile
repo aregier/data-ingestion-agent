@@ -49,4 +49,4 @@ HEALTHCHECK --interval=5s --timeout=10s --start-period=10s --retries=5 CMD node 
 
 # Run the startup script which spawns the agent and acts as a intermediary between it
 # and docker to signal the containers health
-ENTRYPOINT ["node", "index.js"]
+ENTRYPOINT ["node", "start.js"]
