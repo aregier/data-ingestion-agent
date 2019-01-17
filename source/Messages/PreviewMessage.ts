@@ -1,5 +1,5 @@
 import { injectable } from 'inversify';
-import IMessage from '../IMessage';
+import IMessage from '@source/IMessage';
 
 /**
  * Represents a received to instruct the agent to preview queries used by the agent
