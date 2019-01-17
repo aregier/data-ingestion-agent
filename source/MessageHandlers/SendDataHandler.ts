@@ -1,7 +1,7 @@
 // tslint:disable:no-conditional-assignment
 
-import IMessageHandler from '../IMessageHandler';
-import TYPES from '../../ioc.types';
+import IMessageHandler from '@source/IMessageHandler';
+import TYPES from '@root/ioc.types';
 
 import { Readable } from 'stream';
 import { Logger } from 'winston';
@@ -10,16 +10,16 @@ import 'reflect-metadata';
 import * as moment from 'moment';
 import { SnapshotReceivedEventModel } from '@adastradev/data-ingestion-sdk';
 
-import SendDataMessage from '../Messages/SendDataMessage';
-import IDataReader, { IQueryResult } from '../DataAccess/IDataReader';
-import IDataWriter from '../DataAccess/IDataWriter';
-import IntegrationConfigFactory from '../IntegrationConfigFactory';
-import IConnectionPool from '../DataAccess/IConnectionPool';
-import { IntegrationSystemType, IntegrationType, IQueryDefinition, IQueryMetadata  } from '../IIntegrationConfig';
+import SendDataMessage from '@source/Messages/SendDataMessage';
+import IDataReader, { IQueryResult } from '@source/DataAccess/IDataReader';
+import IDataWriter from '@source/DataAccess/IDataWriter';
+import IntegrationConfigFactory from '@source/IntegrationConfigFactory';
+import IConnectionPool from '@source/DataAccess/IConnectionPool';
+import { IntegrationSystemType, IntegrationType, IQueryDefinition, IQueryMetadata  } from '@source/IIntegrationConfig';
 import { mapLimit } from 'async';
-import { TableNotFoundException } from '../TableNotFoundException';
+import { TableNotFoundException } from '@source/TableNotFoundException';
 import { SNS } from 'aws-sdk';
-import IDDLHelper from '../DataAccess/IDDLHelper';
+import IDDLHelper from '@source/DataAccess/IDDLHelper';
 
 let STATEMENT_CONCURRENCY = 5;
 if (process.env.CONCURRENT_CONNECTIONS) {
