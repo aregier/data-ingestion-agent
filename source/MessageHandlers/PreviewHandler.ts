@@ -5,8 +5,8 @@ import { Logger } from 'winston';
 import { inject, injectable } from 'inversify';
 import 'reflect-metadata';
 
-import PreviewMessage from '@source/Messages/PreviewMessage';
-import IDataReader from '@source/DataAccess/IDataReader';
+import PreviewMessage from '@Messages/PreviewMessage';
+import IDataReader from '@DataAccess/IDataReader';
 import IntegrationConfigFactory from '@source/IntegrationConfigFactory';
 import { IntegrationType, IQueryDefinition } from '@source/IIntegrationConfig';
 

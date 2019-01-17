@@ -10,16 +10,16 @@ import 'reflect-metadata';
 import * as moment from 'moment';
 import { SnapshotReceivedEventModel } from '@adastradev/data-ingestion-sdk';
 
-import SendDataMessage from '@source/Messages/SendDataMessage';
-import IDataReader, { IQueryResult } from '@source/DataAccess/IDataReader';
-import IDataWriter from '@source/DataAccess/IDataWriter';
+import SendDataMessage from '@Messages/SendDataMessage';
+import IDataReader, { IQueryResult } from '@DataAccess/IDataReader';
+import IDataWriter from '@DataAccess/IDataWriter';
 import IntegrationConfigFactory from '@source/IntegrationConfigFactory';
-import IConnectionPool from '@source/DataAccess/IConnectionPool';
+import IConnectionPool from '@DataAccess/IConnectionPool';
 import { IntegrationSystemType, IntegrationType, IQueryDefinition, IQueryMetadata  } from '@source/IIntegrationConfig';
 import { mapLimit } from 'async';
 import { TableNotFoundException } from '@source/TableNotFoundException';
 import { SNS } from 'aws-sdk';
-import IDDLHelper from '@source/DataAccess/IDDLHelper';
+import IDDLHelper from '@DataAccess/IDDLHelper';
 
 let STATEMENT_CONCURRENCY = 5;
 if (process.env.CONCURRENT_CONNECTIONS) {
