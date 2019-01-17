@@ -4,14 +4,14 @@ import * as chai from 'chai';
 import sinon = require('sinon');
 import { stubInterface } from 'ts-sinon';
 import { Logger } from 'winston';
-import TYPES from '../../ioc.types';
+import TYPES from '@root/ioc.types';
 import * as chaiAsPromised from 'chai-as-promised';
 chai.use(chaiAsPromised);
 
 import container from './test.inversify.config';
 import * as oracledb from 'oracledb';
-import IConnectionPool from '../../source/DataAccess/IConnectionPool';
-import OracleConnectionPoolProxy from '../../source/DataAccess/Oracle/OracleConnectionPoolProxy';
+import IConnectionPool from '@DataAccess/IConnectionPool';
+import OracleConnectionPoolProxy from '@DataAccess/Oracle/OracleConnectionPoolProxy';
 
 const expect = chai.expect;
 

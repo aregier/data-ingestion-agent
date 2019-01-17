@@ -2,8 +2,8 @@ import 'reflect-metadata';
 import * as chai from 'chai';
 import * as sinon from 'sinon';
 
-import { IntegrationType } from '../../source/IIntegrationConfig';
-import DataAccessDocGenerator from '../../source/DataAccess/DataAccessDocGenerator';
+import { IntegrationType } from '@source/IIntegrationConfig';
+import DataAccessDocGenerator from '@DataAccess/DataAccessDocGenerator';
 import * as fs from 'fs';
 
 const expect = chai.expect;

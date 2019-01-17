@@ -2,15 +2,15 @@
 import 'reflect-metadata';
 import * as chai from 'chai';
 import container from './test.inversify.config';
-import TYPES from '../../ioc.types';
+import TYPES from '@root/ioc.types';
 
-import IMessage from '../../source/IMessage';
-import IDataReader from '../../source/DataAccess/IDataReader';
+import IMessage from '@source/IMessage';
+import IDataReader from '@DataAccess/IDataReader';
 import * as sinon from 'sinon';
 import { Logger } from 'winston';
-import PreviewMessage from '../../source/Messages/PreviewMessage';
-import PreviewHandler from '../../source/MessageHandlers/PreviewHandler';
-import IntegrationConfigFactory from '../../source/IntegrationConfigFactory';
+import PreviewMessage from '@Messages/PreviewMessage';
+import PreviewHandler from '@MessageHandlers/PreviewHandler';
+import IntegrationConfigFactory from '@source/IntegrationConfigFactory';
 
 const expect = chai.expect;
 

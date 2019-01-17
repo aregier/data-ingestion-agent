@@ -6,15 +6,15 @@ chai.use(chaiAsPromised);
 import { Readable } from 'stream';
 import sinon = require('sinon');
 import { stubInterface } from 'ts-sinon';
-import OracleReader from '../../source/DataAccess/Oracle/OracleReader';
+import OracleReader from '@DataAccess/Oracle/OracleReader';
 import container from './test.inversify.config';
 import { Logger, query } from 'winston';
-import TYPES from '../../ioc.types';
-import IConnectionPool from '../../source/DataAccess/IConnectionPool';
-import { IQueryResult } from '../../source/DataAccess/IDataReader';
-import { TableNotFoundException } from '../../source/TableNotFoundException';
-import IDDLHelper from '../../source/DataAccess/IDDLHelper';
-import OracleDDLHelper from '../../source/DataAccess/Oracle/OracleDDLHelper';
+import TYPES from '@root/ioc.types';
+import IConnectionPool from '@DataAccess/IConnectionPool';
+import { IQueryResult } from '@DataAccess/IDataReader';
+import { TableNotFoundException } from '@source/TableNotFoundException';
+import IDDLHelper from '@DataAccess/IDDLHelper';
+import OracleDDLHelper from '@DataAccess/Oracle/OracleDDLHelper';
 
 const expect = chai.expect;
 

@@ -1,31 +1,31 @@
 import { Container, interfaces } from 'inversify';
-import TYPES from '../../ioc.types';
+import TYPES from '@root/ioc.types';
 import { stubInterface } from 'ts-sinon';
 import { AuthManager } from '@adastradev/user-management-sdk';
 
 // Handlers
-import IMessageHandler from '../../source/IMessageHandler';
-import DummyHandler from '../../source/MessageHandlers/DummyHandler';
-import DummyReader from '../../source/DataAccess/Dummy/DummyReader';
+import IMessageHandler from '@source/IMessageHandler';
+import DummyHandler from '@MessageHandlers/DummyHandler';
+import DummyReader from '@DataAccess/Dummy/DummyReader';
 
 // Services/cross-cutting concerns
 import * as Winston from 'winston';
 
 // Factories
-import MessageHandlerFactory from '../../source/MessageHandlerFactory';
-import MessageFactory from '../../source/MessageFactory';
+import MessageHandlerFactory from '@source/MessageHandlerFactory';
+import MessageFactory from '@source/MessageFactory';
 
 // Messages
-import IMessage from '../../source/IMessage';
-import SendDataMessage from '../../source/Messages/SendDataMessage';
-import DummyMessage from '../../source/Messages/DummyMessage';
-import IDataReader from '../../source/DataAccess/IDataReader';
-import IDataWriter from '../../source/DataAccess/IDataWriter';
-import SendDataHandler from '../../source/MessageHandlers/SendDataHandler';
-import IConnectionPool from '../../source/DataAccess/IConnectionPool';
-import IDDLHelper from '../../source/DataAccess/IDDLHelper';
-import OracleDDLHelper from '../../source/DataAccess/Oracle/OracleDDLHelper';
-import { IntegrationSystemType } from '../../source/IIntegrationConfig';
+import IMessage from '@source/IMessage';
+import SendDataMessage from '@Messages/SendDataMessage';
+import DummyMessage from '@Messages/DummyMessage';
+import IDataReader from '@DataAccess/IDataReader';
+import IDataWriter from '@DataAccess/IDataWriter';
+import SendDataHandler from '@MessageHandlers/SendDataHandler';
+import IConnectionPool from '@DataAccess/IConnectionPool';
+import IDDLHelper from '@DataAccess/IDDLHelper';
+import OracleDDLHelper from '@DataAccess/Oracle/OracleDDLHelper';
+import { IntegrationSystemType } from '@source/IIntegrationConfig';
 
 const container = new Container();
 

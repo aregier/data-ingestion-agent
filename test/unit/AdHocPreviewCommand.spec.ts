@@ -1,12 +1,12 @@
 
 import 'reflect-metadata';
 import container from './test.inversify.config';
-import TYPES from '../../ioc.types';
+import TYPES from '@root/ioc.types';
 import * as chai from 'chai';
 import * as AWS from 'aws-sdk-mock';
 
-import AdHocPreviewCommand from '../../source/Commands/AdHocPreviewCommand';
-import PreviewMessage from '../../source/Messages/PreviewMessage';
+import AdHocPreviewCommand from '@Commands/AdHocPreviewCommand';
+import PreviewMessage from '@Messages/PreviewMessage';
 import { Logger } from 'winston';
 
 const expect = chai.expect;

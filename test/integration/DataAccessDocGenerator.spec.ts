@@ -3,8 +3,8 @@ import * as chai from 'chai';
 import * as sinon from 'sinon';
 import * as fs from 'fs';
 
-import { IntegrationType } from '../../source/IIntegrationConfig';
-import DataAccessDocGenerator from '../../source/DataAccess/DataAccessDocGenerator';
+import { IntegrationType } from '@source/IIntegrationConfig';
+import DataAccessDocGenerator from '@DataAccess/DataAccessDocGenerator';
 
 const expect = chai.expect;
 

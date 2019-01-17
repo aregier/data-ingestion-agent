@@ -2,7 +2,7 @@
 import 'reflect-metadata';
 import * as chai from 'chai';
 
-import PreviewMessage from '../../source/Messages/PreviewMessage';
+import PreviewMessage from '@Messages/PreviewMessage';
 
 const expect = chai.expect;
 

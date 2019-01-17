@@ -2,8 +2,8 @@
 import 'reflect-metadata';
 import * as chai from 'chai';
 
-import IntegrationConfigFactory from '../../source/IntegrationConfigFactory';
-import { IIntegrationConfig, IntegrationType } from '../../source/IIntegrationConfig';
+import IntegrationConfigFactory from '@source/IntegrationConfigFactory';
+import { IIntegrationConfig, IntegrationType } from '@source/IIntegrationConfig';
 
 const expect = chai.expect;
 

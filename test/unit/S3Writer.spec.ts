@@ -5,10 +5,10 @@ chai.should();
 import * as awssdk from 'aws-sdk';
 
 import container from './test.inversify.config';
-import S3Writer from '../../source/DataAccess/S3/S3Writer';
+import S3Writer from '@DataAccess/S3/S3Writer';
 import { Readable } from 'stream';
 import { Logger } from 'winston';
-import TYPES from '../../ioc.types';
+import TYPES from '@root/ioc.types';
 import sinon = require('sinon');
 
 const expect = chai.expect;
