@@ -1,16 +1,16 @@
 import * as stream from 'stream';
 import * as oracledb from 'oracledb';
 import { inject, injectable, named } from 'inversify';
-import TYPES from '../../../ioc.types';
+import TYPES from '@root/ioc.types';
 import { Logger } from 'winston';
 
-import IDataReader, { IQueryResult } from '../IDataReader';
-import IConnectionPool from '../IConnectionPool';
-import { TableNotFoundException } from '../../TableNotFoundException';
+import IDataReader, { IQueryResult } from '@DataAccess/IDataReader';
+import IConnectionPool from '@DataAccess/IConnectionPool';
+import { TableNotFoundException } from '@source/TableNotFoundException';
 
 import 'reflect-metadata';
-import { IIntegrationConfig, IntegrationSystemType, IntegrationType, IQueryDefinition  } from '../../IIntegrationConfig';
-import IDDLHelper from '../IDDLHelper';
+import { IIntegrationConfig, IntegrationSystemType, IntegrationType, IQueryDefinition  } from '@source/IIntegrationConfig';
+import IDDLHelper from '@DataAccess/IDDLHelper';
 
 /**
  * An interface through which data is queried using predefined queries for the

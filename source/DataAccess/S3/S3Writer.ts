@@ -1,9 +1,9 @@
 import { Readable, Stream } from 'stream';
 import { inject, injectable } from 'inversify';
-import TYPES from '../../../ioc.types';
+import TYPES from '@root/ioc.types';
 import * as crypto from 'crypto';
 
-import IDataWriter from '../IDataWriter';
+import IDataWriter from '@DataAccess/IDataWriter';
 import { Logger } from 'winston';
 import AWS = require('aws-sdk');
 
